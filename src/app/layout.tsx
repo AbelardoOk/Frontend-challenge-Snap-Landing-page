@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Epilogue } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const epilogue = Epilogue({ subsets: ['latin'], weight: ['500', '700'], variable: '--font-epilogue' })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${epilogue.variable} font-sans text-lg bg-neutral-white text-neutral-gray `}>{children}</body>
     </html>
   )
 }
