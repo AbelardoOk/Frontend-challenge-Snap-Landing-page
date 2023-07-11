@@ -2,7 +2,7 @@ import { Header } from '@/components/header'
 
 export default function Home() {
   return (
-    <main>
+    <main className='h-screen bg-neutral-white'>
       <Header/>
     </main>
   )

@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${epilogue.variable} font-sans text-lg bg-neutral-white text-neutral-gray `}>{children}</body>
+    <html lang="pt-BR">
+      <body className={`${epilogue.variable} font-sans text-lg text-neutral-gray `}>{children}</body>
     </html>
   )
 }
