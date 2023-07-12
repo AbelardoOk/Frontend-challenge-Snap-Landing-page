@@ -4,15 +4,14 @@ import { Logo } from "./logo";
 import { ArrowDown } from "./arrowDown";
 import { useState } from "react";
 import { ArrowUp } from "./arrowUp";
-import { list } from "postcss";
 import { CalendarIcon } from "./calendar";
 import { TodoIcon } from "./todo";
 import { ReminderIcon } from "./reminder";
 import { PlanIcon } from "./planing";
 
 export function Header() {
-  const [isOpenFeature, setIsOpenFeature] = useState(false);
-  const [isOpenCompany, setIsOpenCompany] = useState(false);
+  const [isOpenFeature, setIsOpenFeature] = useState(true);
+  const [isOpenCompany, setIsOpenCompany] = useState(true);
 
   return (
     <header className="flex justify-between flex-row font-medium px-10 py-8">
