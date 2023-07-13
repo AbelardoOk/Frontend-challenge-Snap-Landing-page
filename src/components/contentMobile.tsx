@@ -26,7 +26,7 @@ export function MainContentMobile(){
 
         <button className="px-5 py-2 rounded-xl text-neutral-white bg-neutral-black border-neutral-black border-2 hover:bg-transparent hover:text-neutral-black transition duration-300">Learn more</button>
 
-        <div className="mt-8 flex flex-row gap-4">
+        <div className="pt-[15%] px-3 flex justify-center items-center flex-row gap-4">
           <DatabizLogo/>
           <AudiophileLogo/>
           <MeetLogo/>

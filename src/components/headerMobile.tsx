@@ -14,12 +14,12 @@ import { CloseIcon } from "./close";
 export function HeaderMobile() {
   const [isOpenFeature, setIsOpenFeature] = useState(true);
   const [isOpenCompany, setIsOpenCompany] = useState(true);
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(true);
 
   return (
     <header className="font-medium px-10 pt-8 z-10 relative">
 
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row items-start justify-between">
         <Logo />
       <button
         onClick={() => setIsOpenMenu((prev) => !prev)}>
@@ -28,12 +28,23 @@ export function HeaderMobile() {
       </button>
       </div>
 
-    {!isOpenMenu ? (
-    <div className="absolute bg-neutral-white ml-[30%] h-screen">
+      {!isOpenMenu ? (
+        <div className="absolute ml-[-2.5rem] mt-[-3.7rem] h-screen w-screen bg-black opacity-50 z-[-1] transition duration-300"></div>
+      ) : (
+        <div></div>
+      )}
 
-      <div className="pt-8 px-8">
+    {!isOpenMenu ? (
+    <div className="absolute mt-[-3.7rem] h-screen w-screen transition duration-300 z-auto">
+      <div className="ml-[25%] pt-8 px-8 bg-neutral-white h-screen">
+
+      <button
+        className="flex w-full pr-12 justify-end"
+        onClick={() => setIsOpenMenu((prev) => !prev)}>
+        <CloseIcon />
+      </button>
       
-        <div className="flex flex-col items-baseline gap-10">
+        <div className="flex flex-col items-baseline gap-4 mt-8">
 
           <div className="flex flex-col fill-neutral-gray">
             <button
@@ -76,24 +87,7 @@ export function HeaderMobile() {
                 </a>
               </div>
             ) : (
-              <div className="mt-[-500%] rounded-md text-transparent">
-                <a
-                  href="">
-                  Todo List
-                </a>
-                <a
-                  href="">
-                  Calendar
-                </a>
-                <a
-                  href="">
-                  Reminders
-                </a>
-                <a
-                  href="">
-                  Planning
-                </a>
-              </div>
+              <div></div>
             )}
           </div>
 
@@ -107,7 +101,7 @@ export function HeaderMobile() {
             </button>
 
             {!isOpenCompany ? (
-              <div className="flex flex-col p-4 gap-4">
+              <div className="flex flex-col pt-4 gap-4 ml-4">
                 <a href="" className="hover:text-neutral-black hover:fill-neutral-black transition duration-300">
                   Company
                 </a>
@@ -119,31 +113,21 @@ export function HeaderMobile() {
                 </a>
               </div>
             ) : (
-              <div className="mt-[-500%] rounded-md text-transparent">
-                <a href="">
-                  Company
-                </a>
-                <a href="">
-                  Our Team
-                </a>
-                <a href="">
-                  Blog
-                </a>
-              </div>
+              <div></div>
             )}
           </div>
 
-            <button className= "hover:text-neutral-black transition duration-300">Careers</button>
+          <button className= "hover:text-neutral-black transition duration-300">Careers</button>
 
-            <button className= "mt-[-1.75rem] hover:text-neutral-black transition duration-300">About</button>
-          </div>
+          <button className= "hover:text-neutral-black transition duration-300">About</button>
+        </div>
 
-          <div className= "mt-6 flex flex-col gap-8 items-center">
-          <button className="hover:text-neutral-black transition duration-300">Login</button>
+          <div className= "mt-6 ml-[-2rem] flex flex-col gap-6 items-center">
+            <button className="hover:text-neutral-black transition duration-300">Login</button>
 
-          <button className="mt-[-4%] px-6 py-2 border-neutral-gray border-2 rounded-2xl hover:text-neutral-black hover:border-neutral-black transition duration-300">
-            Register
-          </button>
+            <button className="mt-[-4%] px-6 py-2 border-neutral-gray border-2 rounded-2xl hover:text-neutral-black hover:border-neutral-black transition duration-300">
+              Register
+            </button>
           </div>
 
       </div>
