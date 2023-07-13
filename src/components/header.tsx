@@ -17,7 +17,7 @@ export function Header() {
   return (
     <header className="flex justify-between flex-row font-medium px-10 pt-8">
       
-      <div className="flex flex-row items-baseline gap-10">
+      <div className="flex flex-row items-start gap-10">
         
         <Logo />
 
@@ -90,7 +90,7 @@ export function Header() {
         <div className="flex flex-col fill-neutral-gray">
           <button
             onClick={() => setIsOpenCompany((prev) => !prev)}
-            className="flex flex-row gap-2 hover:text-neutral-black hover:fill-neutral-black transition duration-300"
+            className="flex flex-row gap-2 hover:text-neutral-black hover:fill-neutral-black active:text-neutral-black transition duration-300"
           >
             Company
             {!isOpenCompany ? <ArrowDown /> : <ArrowUp />}
