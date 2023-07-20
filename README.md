@@ -1,4 +1,4 @@
-# Snap - Responsive anding page - Frontend challenge
+# Snap - Responsive Landing page - Frontend challenge
 
 Um site em formato de landing page criado utilizando React/NextJS e tailwind Css com a finalidade de cumprir um desafio de frontend no site ["Frontend Mentor"](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5)
 
